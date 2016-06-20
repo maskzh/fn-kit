@@ -4,7 +4,7 @@ module.exports = {
   output: {
     library: 'fnKit',
     libraryTarget: 'umd',
-    filename: 'dist/fnKit.js'
+    filename: 'dist/fn-kit.js'
   },
   module: {
     loaders: [
