@@ -1,0 +1,19 @@
+{
+  "name": "fn-kit",
+  "version": "0.0.1",
+  "description": "a common function kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/maskzh/fn-kit"
+  },
+  "keywords": [
+    "fn",
+    "function"
+  ],
+  "author": "maskzh",
+  "license": "MIT"
+}
