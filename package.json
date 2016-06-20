@@ -2,18 +2,31 @@
   "name": "fn-kit",
   "version": "0.0.1",
   "description": "a common function kit",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf ./lib && rimraf ./dist",
+    "lint": "eslint ./src/*.js",
+    "test": "npm run lint",
+    "build": "npm run clean & babel ./src --out-dir ./lib && webpack"
   },
   "repository": {
     "type": "git",
-    "url": "github.com/maskzh/fn-kit"
+    "url": "https://github.com/maskzh/fn-kit"
   },
   "keywords": [
-    "fn",
-    "function"
+    "function",
+    "toolkit"
   ],
   "author": "maskzh",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "eslint": "^2.13.0",
+    "rimraf": "^2.5.2",
+    "webpack": "^1.13.1"
+  }
 }
