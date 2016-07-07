@@ -6,8 +6,11 @@
     <script src="../node_modules/babel-core/browser-polyfill.js"></script>
     <script src="../dist/fn-kit.js"></script>
     <script>
-      document.write(JSON.stringify(fnKit))
-      console.log(fnKit)
+    function objectToQueryString(obj) {
+      console.log(Object.keys(obj))
+      return Object.keys(obj).reduce((previousValue, currentValue) => previousValue.concat(`${currentValue}=${obj[currentValue]}`), []).join('&')
+    }
+      console.log(objectToQueryString({page: 1, 'per-page': 10, keyword: ""}))
     </script>
   </body>
 </html>
