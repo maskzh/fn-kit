@@ -103,6 +103,17 @@ export function copy(obj, deep) {
   return target
 }
 
+// 判断对象是否为空
+export function hasSomeProperties(obj) {
+  let flag = false
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      flag = true
+    }
+  }
+  return flag
+}
+
 // 格式化数字金额
 export function numberFormat(number, decimals, decPoint, thousandsSep) {
   /*
