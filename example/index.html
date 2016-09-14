@@ -7,7 +7,6 @@
     <script src="../dist/fn-kit.js"></script>
     <script>
     function objectToQueryString(obj) {
-      console.log(Object.keys(obj))
       return Object.keys(obj).reduce((previousValue, currentValue) => previousValue.concat(`${currentValue}=${obj[currentValue]}`), []).join('&')
     }
       console.log(objectToQueryString({page: 1, 'per-page': 10, keyword: ""}))

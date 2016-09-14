@@ -1,6 +1,6 @@
 // 将对象序列化为query字符串
 export function objectToQueryString(obj) {
-  return Object.keys(obj).reduce((previousValue, currentValue) => previousValue.concat(`${currentValue}=${obj[currentValue]}`), []).join('&')
+  return Object.keys(JSON.parse(JSON.stringify(obj))).reduce((previousValue, currentValue) => previousValue.concat(`${currentValue}=${obj[currentValue]}`), []).join('&')
 }
 
 // query字符串转化为对象
