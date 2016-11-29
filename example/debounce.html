@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>example</title>
+  </head>
+  <body>
+    <script src="../dist/fn-kit.js"></script>
+    <script>
+      var debounceFn = fnKit.debounce(function() {
+        console.log('debounce ' + new Date().getMilliseconds())
+      })
+      var immediateFn = fnKit.immediate(function() {
+        console.log('immediate ' + new Date().getMilliseconds())
+      })
+      var throttleFn = fnKit.throttle(function() {
+        console.log('throttle ' + new Date().getMilliseconds())
+      })
+      for (var i = 0; i < 100; i++) {
+        debounceFn()
+        immediateFn()
+        throttleFn()
+      }
+    </script>
+  </body>
+</html>

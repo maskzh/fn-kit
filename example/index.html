@@ -3,13 +3,20 @@
     <title>example</title>
   </head>
   <body>
-    <script src="../node_modules/babel-core/browser-polyfill.js"></script>
     <script src="../dist/fn-kit.js"></script>
     <script>
-    function objectToQueryString(obj) {
-      return Object.keys(obj).reduce((previousValue, currentValue) => previousValue.concat(`${currentValue}=${obj[currentValue]}`), []).join('&')
-    }
-      console.log(objectToQueryString({page: 1, 'per-page': 10, keyword: ""}))
+    console.log(fnKit.genId())
+
+    console.log(fnKit.hasSomeProperties({}), fnKit.hasSomeProperties({ a: 1 }))
+
+    console.log(fnKit.objectToQueryString({ a: 1 }), fnKit.queryStringToObject('a=1&b=aaa'))
+
+    console.log(fnKit.isEmail('maskzh@gmail.com'))
+
+    console.log(fnKit.isMobilePhoneNumber('18768178036'))
+
+    console.log(fnKit.numberFormat('990988.22222', 2))
+    console.log(fnKit.numberFormat('990988.99999', 2))
     </script>
   </body>
 </html>
